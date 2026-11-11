@@ -51,6 +51,14 @@ a{color:inherit}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
 @media (max-width:420px){.row2{grid-template-columns:1fr}}
 
+
+/* the offer, same badge on every version: FREE ESTIMATE leads the hero */
+.offer-tag{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.ot-main{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;background:var(--gold-grad);color:#1a1408;
+  font:800 clamp(16px,1.6vw,20px)/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;box-shadow:0 10px 26px -10px rgba(227,181,101,.75),inset 0 1px 0 rgba(255,255,255,.5)}
+.ot-main svg{width:20px;height:20px;flex:none}
+.ot-sub{font:700 12px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+
 /* proof marks */
 .stars{display:inline-flex;gap:2px;color:var(--gold)}
 .stars svg{width:16px;height:16px}

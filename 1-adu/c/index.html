@@ -40,6 +40,7 @@ body{background:var(--ink);color:#fff}
 .quiz .fb-step[hidden]{display:none}
 .quiz .back{background:none;border:0;color:#a9a296;font:700 14px var(--sans);padding:12px 0 0;cursor:pointer}
 .quiz .fb-fine{color:#a9a296}
+.quiz-title{font:400 26px/1.1 var(--serif);color:var(--gold-hi);margin:0 0 14px}
 .dots{display:flex;gap:6px;margin-bottom:16px}
 .dots i{flex:1;height:4px;border-radius:2px;background:#333}
 .quiz[data-at="0"] .dots i:nth-child(-n+1),.quiz[data-at="1"] .dots i:nth-child(-n+2),.quiz[data-at="2"] .dots i:nth-child(-n+3),.quiz[data-at="3"] .dots i{background:var(--gold)}
@@ -112,8 +113,8 @@ body{background:var(--ink);color:#fff}
   </div>
   <div class="main">
     <div>
-      <div class="eyebrow" data-k="eyebrow">ADU design and build · San Diego County</div>
-      <h1 data-k="h1" style="margin-top:14px">Already have ADU&nbsp;plans?<span class="pk">We’ll build to them.</span></h1>
+      <div class="offer-tag"><span class="ot-main"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#1a1408"/><path d="M5.8 10.4l2.7 2.6 5.7-6" fill="none" stroke="#FFD07B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free estimate</span><span class="ot-sub" data-k="eyebrow">ADU design and build · San Diego County</span></div>
+      <h1 data-k="h1" style="margin-top:18px">Already have ADU&nbsp;plans?<span class="pk">We’ll build to them.</span></h1>
       <p class="sub" data-k="sub">Send us what you have. We come back with a free estimate and a build timeline, worked out from your plans, not a template.</p>
       <div class="house" aria-hidden="true">
         <svg viewBox="0 0 100 86"><path class="p0" d="M10 80H90"/><path class="p1" d="M22 80V44M78 80V44"/><path class="p2 rf" d="M6 48L50 12L94 48"/><path class="p3" d="M42 80V60H58V80"/></svg>
@@ -121,9 +122,10 @@ body{background:var(--ink);color:#fff}
       </div>
     </div>
     <form class="quiz" id="adu-quiz" data-fbform data-wizard novalidate>
+      <div class="quiz-title">Your free estimate</div>
       <div class="dots"><i></i><i></i><i></i><i></i></div>
       <div class="fb-step" role="group" data-step="plans">
-        <div class="qhead"><span>Free estimate</span><span>1 / 4</span></div>
+        <div class="qhead"><span>Question</span><span>1 / 4</span></div>
         <h2 class="fb-q">Where are your ADU plans today?</h2>
         <div class="opts">
           <button class="opt" data-opt="approved">Approved, ready to build</button>
@@ -133,7 +135,7 @@ body{background:var(--ink);color:#fff}
         </div>
       </div>
       <div class="fb-step" role="group" data-step="type">
-        <div class="qhead"><span>Free estimate</span><span>2 / 4</span></div>
+        <div class="qhead"><span>Question</span><span>2 / 4</span></div>
         <h2 class="fb-q">What would you build?</h2>
         <div class="opts">
           <button class="opt" data-opt="detached">Detached ADU</button>
@@ -145,7 +147,7 @@ body{background:var(--ink);color:#fff}
         <button type="button" class="back" data-back>← Back</button>
       </div>
       <div class="fb-step" role="group" data-step="timing">
-        <div class="qhead"><span>Free estimate</span><span>3 / 4</span></div>
+        <div class="qhead"><span>Question</span><span>3 / 4</span></div>
         <h2 class="fb-q">When would you like to start?</h2>
         <div class="opts">
           <button class="opt" data-opt="0-3">In the next 3 months</button>
