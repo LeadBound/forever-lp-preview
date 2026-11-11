@@ -62,7 +62,12 @@ body{background:var(--paper)}
 
 /* proof */
 .proof{padding:96px 0;background:#fff}
-.proof .g{display:grid;grid-template-columns:1fr 1.3fr;gap:56px}
+.proof .g{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}
+.qcol{display:grid;gap:26px}
+.qcol figure{margin:0;border-right:0;border-left:2px solid var(--gold);padding:4px 0 4px 20px}
+.qcol p{font:400 21px/1.4 var(--didot);font-style:italic}
+.qcol cite{display:block;margin-top:10px;font:800 13px var(--sans);font-style:normal}
+.qcol cite span{font-weight:500;color:var(--mute)}
 .score{display:grid;gap:14px;align-content:start}
 .tile{border:1px solid var(--line);border-radius:14px;padding:20px 22px;background:var(--paper)}
 .tile .n{font:400 64px/1 var(--didot);font-style:italic}
@@ -183,18 +188,6 @@ body{background:var(--paper)}
   </div>
 </section>
 
-<section class="proc">
-  <div class="wrap">
-    <div class="eyebrow" style="color:var(--gold-lo)">How it goes</div>
-    <h2 style="margin-top:12px">One team, plans to keys.</h2>
-    <ol class="steps">
-      <li><h3>Consultation and planning</h3><p>We go over your plans, your goals and your budget.</p></li>
-      <li><h3>Permits and approvals</h3><p>We handle the permits and approvals.</p></li>
-      <li><h3>The build</h3><p>Our crew builds it, with one project manager start to finish.</p></li>
-      <li><h3>Inspection and handover</h3><p>Every detail inspected before you get the keys.</p></li>
-    </ol>
-  </div>
-</section>
 
 <section class="proof">
   <div class="wrap">
@@ -203,23 +196,12 @@ body{background:var(--paper)}
         <div class="tile dark"><div class="n">4.9</div><div class="stars" style="margin-top:8px"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></div><div class="k">On Google</div></div>
         <div class="tiles2"><div class="tile"><div class="n" style="font-size:40px">BBB</div><div class="k">Accredited business</div></div><div class="tile"><div class="n" style="font-size:40px">CSLB</div><div class="k">License #1037142</div></div></div>
       </div>
-      <div>
-        <div class="eyebrow" style="color:var(--gold-lo)">From our own contracts</div>
-        <h2 style="margin-top:12px">ADUs and additions we’ve built.</h2>
-        <ul class="jl">
-          <li><b>ADU · 2024</b><span>Fowles Street</span><small>Oceanside</small></li>
-          <li><b>Addition · 2024</b><span>49th Street</span><small>San Diego</small></li>
-          <li><b>Room addition · 2024</b><span>Chaz Place</span><small>La Mesa</small></li>
-          <li><b>Addition · 2023</b><span>Mount Gaywas Drive</span><small>San Diego</small></li>
-          <li><b>Addition · 2023</b><span>Terra Nova Drive</span><small>Chula Vista</small></li>
-          <li><b>Room addition · 2023</b><span>Bluewater Road</span><small>Carlsbad</small></li>
-        </ul>
+      <div class="qcol">
+        <div class="eyebrow" style="color:var(--gold-lo)">What homeowners say</div>
+        <figure><p>“Forever Builders truly exceeded expectations with the addition to my house, from start to finish. The quality of the work is outstanding.”</p><cite>Adam S. <span>· San Diego</span></cite></figure>
+        <figure><p>“We got quotes from three companies before making our final decision. We decided to go with Forever Builders due to the ease of communication with Ben.”</p><cite>Autumn P. <span>· San Diego</span></cite></figure>
+        <figure><p>“Adam my project manager was very helpful and professional. Job site was clean and completed promptly as promised!”</p><cite>Juan C. <span>· National City</span></cite></figure>
       </div>
-    </div>
-    <div class="qs">
-      <figure><p>“Forever Builders truly exceeded expectations with the addition to my house, from start to finish.”</p><cite>Adam S. <span>· San Diego</span></cite></figure>
-      <figure><p>“We got quotes from three companies before making our final decision. We decided to go with Forever Builders.”</p><cite>Autumn P. <span>· San Diego</span></cite></figure>
-      <figure><p>“Job site was clean and completed promptly as promised!”</p><cite>Juan C. <span>· National City</span></cite></figure>
     </div>
   </div>
 </section>
@@ -280,16 +262,6 @@ body{background:var(--paper)}
   </div>
 </section>
 
-<section class="faq">
-  <div class="wrap g">
-    <h2>Before you send.</h2>
-    <div>
-      <details><summary>My plans have been sitting a while. Can you still help?</summary><p>Yes. Send them as they are. We look at what is there and tell you what it takes to build.</p></details>
-      <details><summary>I don’t have plans yet. Is this for me?</summary><p>Yes. Tell us what you have in mind. We handle the ADU process from design through permits and the build.</p></details>
-      <details><summary>What does the estimate cost?</summary><p>Nothing. It is free and there is no obligation.</p></details>
-    </div>
-  </div>
-</section>
 
 <footer class="foot">
   <div class="wrap">
