@@ -21,11 +21,11 @@ h1 small{display:block;font-weight:500;font-size:.5em;color:#DCAF5E;letter-spaci
 .c img{width:100%;height:100%;object-fit:cover;object-position:50% 6%;display:block}
 .v b{font-size:clamp(22px,3.4svh,30px);font-weight:800;color:#FFD07B}
 .v:hover .c,.v:focus-visible .c{transform:scale(1.05)}
-:root{--d:min(240px,26vw,30svh)}
+:root{--d:min(220px,19vw,30svh)}
 @media (max-width:640px){
-  .pick{flex-direction:column;gap:clamp(10px,2svh,20px)}
-  .v{flex-direction:row;gap:18px}
-  :root{--d:min(170px,20svh)}
+  .pick{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,2.4svh,22px) 22px}
+  .v{gap:6px}
+  :root{--d:min(150px,38vw,23svh)}
 }
 </style>
 </head>
@@ -36,6 +36,7 @@ h1 small{display:block;font-weight:500;font-size:.5em;color:#DCAF5E;letter-spaci
     <a class="v" href="a/?pick=1"><span class="c"><img src="shots/1-adu-a-mob-hero.jpg" alt="גרסה 1"></span><b>1</b></a>
     <a class="v" href="b/?pick=1"><span class="c"><img src="shots/1-adu-b-mob-hero.jpg" alt="גרסה 2"></span><b>2</b></a>
     <a class="v" href="c/?pick=1"><span class="c"><img src="shots/1-adu-c-mob-hero.jpg" alt="גרסה 3"></span><b>3</b></a>
+    <a class="v" href="d/?pick=1"><span class="c"><img src="shots/1-adu-d-mob-hero.jpg" alt="גרסה 4"></span><b>4</b></a>
   </div>
 </body>
 </html>

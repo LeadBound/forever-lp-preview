@@ -131,7 +131,7 @@
   /* review only: opened from the chooser (?pick=1) -> a pill back to the three versions */
   function pickBack() {
     if (q.get('pick') !== '1') return;
-    var v = { 'adu-a': '1', 'adu-b': '2', 'adu-c': '3' }[FB.page] || '';
+    var v = { 'adu-a': '1', 'adu-b': '2', 'adu-c': '3', 'adu-d': '4' }[FB.page] || '';
     var a = document.createElement('a');
     a.href = '../'; a.dir = 'rtl'; a.textContent = '→ חזרה לגרסאות' + (v ? ' · גרסה ' + v : '');
     a.style.cssText = 'position:fixed;z-index:99;top:12px;right:12px;padding:9px 14px;border-radius:999px;background:rgba(14,14,15,.88);color:#FFD07B;border:1px solid #DCAF5E;font:700 13px Heebo,Manrope,system-ui,sans-serif;text-decoration:none;box-shadow:0 8px 20px -8px #000';
