@@ -10,28 +10,34 @@
 <link rel="stylesheet" href="../../_shared/fb.css">
 <style>
 body{background:var(--ink);color:#fff}
-.hero{position:relative;background:#0b0b0c url(../../_assets/site/wide-black-marble-bg.webp) center/cover;overflow:hidden}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold-grad)}
-.top{position:relative;z-index:3;padding:18px var(--gut) 8px}
-.top img{width:132px}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-bottom:56px}
-.hero h1{font-size:clamp(40px,4.1vw,60px);margin:22px 0 20px}
-.hero .sub{font-size:19px;max-width:30em;color:#e9e4da}
-.hero .proofrow{margin-top:34px;color:#e9e4da}
-.photo{position:relative;border-radius:18px;overflow:hidden;height:320px;box-shadow:0 40px 80px -30px #000}
-.photo img{object-position:50% 30%}
-.photo img{width:100%;height:100%;object-fit:cover}
-.photo figcaption{position:absolute;left:14px;bottom:12px;font:600 12px var(--sans);letter-spacing:.04em;color:#fff;opacity:.85;text-shadow:0 1px 6px #000}
+.hero{position:relative;background:#0b0b0c url(../../_assets/site/wide-black-marble-bg.webp) center/cover;overflow:hidden;display:flex;flex-direction:column;min-height:min(100svh,880px)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold-grad);z-index:3}
+.top{position:relative;z-index:3;padding:20px var(--gut) 0;width:100%;max-width:var(--max);margin:0 auto}
+.top img{width:124px}
+.hero-grid{position:relative;z-index:2;flex:1;display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:center;padding-top:20px;padding-bottom:40px}
+.hero h1{font-size:clamp(40px,4.4vw,62px);margin:20px 0 18px}
+.hero .sub{font-size:18px;max-width:30em;color:#e9e4da}
+.hero .proofrow{margin-top:28px;color:#e9e4da}
+.photo{position:absolute;top:0;right:0;bottom:0;width:50%;margin:0;z-index:0}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b0b0c 0%,rgba(11,11,12,.55) 35%,rgba(11,11,12,.25) 100%)}
+.photo figcaption{position:absolute;right:16px;bottom:14px;z-index:1;font:600 12px var(--sans);letter-spacing:.04em;color:#fff;opacity:.8;text-shadow:0 1px 6px #000}
 .right{position:relative}
-.card{position:relative;margin:-96px 0 0 -48px;z-index:2;background:rgba(18,18,19,.94);backdrop-filter:blur(6px);border:1px solid rgba(220,175,94,.45);border-radius:18px;padding:26px 24px 22px;box-shadow:0 30px 60px -20px #000}
-.card h2{font-size:26px;margin:0 0 2px}
-.card .lede{font-size:14px;color:#cfc8bb;margin:0 0 14px}
-.card .opts{grid-template-columns:1fr 1fr}
-.card .opt{background:#1d1d20;border-color:#36363b;color:#fff;font-size:14px;min-height:50px}
+.card{position:relative;z-index:2;background:rgba(16,16,17,.93);backdrop-filter:blur(8px);border:1px solid rgba(220,175,94,.5);border-radius:18px;padding:22px 22px 16px;box-shadow:0 30px 60px -20px #000}
+.card h2{font-size:25px;margin:0 0 2px;color:var(--gold-hi)}
+.card .lede{font-size:13.5px;color:#cfc8bb;margin:0 0 14px}
+.card .fb-q{font-size:14px;margin-bottom:10px}
+.card .opts{grid-template-columns:1fr 1fr;gap:8px}
+.card .opt{background:#1d1d20;border-color:#36363b;color:#fff;font-size:13.5px;min-height:46px;padding:10px 12px;gap:10px}
+.card .opt::before{width:15px;height:15px}
 .card .opt[aria-pressed="true"]{background:#2a2418;border-color:var(--gold)}
-.card .fb-field input{background:#1d1d20;border-color:#36363b;color:#fff}
-.card .fb-step{margin-bottom:16px}
-.card .fb-fine{color:#cfc8bb}
+.card .fb-field{margin-bottom:10px}
+.card .fb-field span{font-size:11px;margin-bottom:5px}
+.card .fb-field input{background:#1d1d20;border-color:#36363b;color:#fff;height:46px}
+.card .fb-step{margin-bottom:14px}
+.card .fb-file{margin:0 0 12px;font-size:13px}
+.card .fb-file::before{width:26px;height:26px}
+.card .fb-fine{color:#cfc8bb;margin-top:10px}
 .card .fb-fine a{color:var(--gold-hi);text-decoration:none;font-weight:700}
 
 /* signature: plans -> framing -> finished */
@@ -53,20 +59,8 @@ body{background:var(--ink);color:#fff}
 .frame figcaption{position:absolute;right:12px;bottom:10px;font:600 11px var(--sans);opacity:.75;z-index:2}
 .build-head{position:absolute;top:0;left:0;right:0}
 
-/* jobs */
-.jobs{background:var(--ink-2);padding:96px 0}
-.jobs h2,.rev h2,.own h2{font-size:clamp(34px,4vw,54px)}
-.jobs .intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:40px}
-.jobs .intro p{color:#cfc8bb}
-.joblist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-d)}
-.joblist li{display:grid;grid-template-columns:200px 1fr 80px;gap:16px;padding:20px 0;border-bottom:1px solid var(--line-d);align-items:baseline}
-.joblist .t{font:800 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.joblist .s{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px)}
-.joblist .s small{font:500 15px var(--sans);color:#a9a296;margin-left:10px}
-.joblist .y{text-align:right;font:700 15px var(--sans);color:#a9a296}
-
 /* reviews on ivory marble */
-.rev{background:var(--ivory) url(../../_assets/site/white-marble-bg.webp) center/cover;color:var(--text);padding:96px 0}
+.rev{background:var(--ivory) url(../../_assets/site/white-marble-bg.webp) center/cover;color:var(--text);padding:88px 0}
 .rev-top{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-bottom:44px}
 .big{font-family:var(--serif);font-size:120px;line-height:.85}
 .rev-top .stars svg{width:22px;height:22px}
@@ -79,28 +73,27 @@ body{background:var(--ink);color:#fff}
 .q cite span{display:block;font-weight:500;color:var(--mute)}
 
 /* owners + the offer, the peak */
-.own{background:var(--ink) url(../../_assets/site/wide-black-marble-bg.webp) center/cover;padding:96px 0}
-.own .g{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center}
-.own img{border-radius:16px;border:1px solid rgba(220,175,94,.5);width:100%}
-.own blockquote{margin:0;font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);line-height:1.3}
-.own cite{display:block;margin-top:16px;font:700 14px var(--sans);font-style:normal;color:var(--gold)}
-.peak{margin-top:72px;border-radius:22px;padding:48px;background:linear-gradient(135deg,#2a2213,#16130d 60%);border:1px solid rgba(255,208,123,.5);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
-.peak h2{font-size:clamp(32px,3.6vw,50px)}
-.peak p{color:#e5dccb;margin-top:10px;max-width:34em}
+.own{background:var(--ink) url(../../_assets/site/wide-black-marble-bg.webp) center/cover;padding:88px 0}
+.peak{border-radius:22px;padding:36px 40px;background:linear-gradient(135deg,#2a2213,#16130d 60%);border:1px solid rgba(255,208,123,.5);display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center}
+.ownimg{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:2px solid var(--gold)}
+.peak h2{font-size:clamp(28px,3vw,42px)}
+.oq{color:#ddd5c6;margin-top:12px;font-size:15px;max-width:40em}
+.oq b{color:var(--gold);font-weight:700;white-space:nowrap}
 
 @media (max-width:900px){
   .top{padding:16px var(--gut) 0}.top img{width:112px}
-  .hero-grid{position:static;grid-template-columns:1fr;gap:0;padding-bottom:48px}
+  .hero{min-height:0}
+  .hero-grid{position:static;grid-template-columns:1fr;gap:0;padding-top:8px;padding-bottom:44px}
   .hero .proofrow .sep{display:none}
   .hero h1{margin:10px 0 14px}
   .hero .sub{font-size:17px}
   .hero .proofrow{margin-top:20px;font-size:13px;gap:8px 14px}
-  .photo{position:absolute;inset:0 0 auto 0;border-radius:0;height:560px;box-shadow:none;z-index:0}
+  .photo{inset:0 0 auto 0;width:auto;height:560px}
   .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.55) 0%,rgba(11,11,12,.75) 55%,#0b0b0c 100%)}
   .photo figcaption{display:none}
   .left{position:relative;z-index:2;padding-top:6px}
   .right{position:static}
-  .card{margin:28px 0 0;padding:22px 18px 18px}
+  .card{margin:26px 0 0;padding:20px 16px 16px}
   .card .opts{grid-template-columns:1fr 1fr;gap:8px}
   .card .opt{font-size:13.5px;padding:10px 12px;gap:8px}
   .card .opt::before{width:14px;height:14px}
@@ -110,17 +103,13 @@ body{background:var(--ink);color:#fff}
   .stages{gap:0;position:relative;min-height:170px}
   .stages li{position:absolute;inset:0 0 auto 0;opacity:0;border:0;padding:0}
   .stages li.on{opacity:1}
-  .jobs,.rev,.own{padding:64px 0}
-  .jobs .intro{grid-template-columns:1fr;gap:14px}
-  .joblist li{grid-template-columns:1fr auto;gap:2px 12px}
-  .joblist .t{grid-column:1/-1}
-  .joblist .s small{display:block;margin:2px 0 0}
+  .rev,.own{padding:56px 0}
   .rev-top{grid-template-columns:1fr;gap:10px}
   .big{font-size:88px}
   .quotes{grid-template-columns:1fr}
-  .own .g{grid-template-columns:1fr;gap:28px}
-  .own img{max-width:240px}
-  .peak{grid-template-columns:1fr;padding:30px 22px;margin-top:48px}
+  .peak{grid-template-columns:1fr;gap:18px;padding:26px 20px}
+  .ownimg{width:84px;height:84px}
+  .peak .btn{width:100%}
 }
 @media (prefers-reduced-motion:reduce){
   .build{height:auto}.build .stick{position:static;height:auto;padding:64px 0}
@@ -135,6 +124,7 @@ body{background:var(--ink);color:#fff}
 <svg width="0" height="0" style="position:absolute"><symbol id="st" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></symbol></svg>
 
 <header class="hero">
+  <figure class="photo" style="margin:0"><img data-k-src="hero" src="../../_assets/site/my-forever-builders-room-addition-adu-project.webp" alt="Forever Builders crew on a framing job"><figcaption>On a Forever Builders job site</figcaption></figure>
   <div class="wrap top"><img src="../../_assets/logo.png" alt="Forever Builders Home Remodeling"></div>
   <div class="wrap hero-grid">
     <div class="left">
@@ -148,7 +138,6 @@ body{background:var(--ink);color:#fff}
       </div>
     </div>
     <div class="right">
-      <figure class="photo" style="margin:0"><img data-k-src="hero" src="../../_assets/site/my-forever-builders-room-addition-adu-project.webp" alt="Forever Builders crew on a framing job"><figcaption>On a Forever Builders job site</figcaption></figure>
       <form class="card" id="estimate" data-fbform novalidate>
         <h2>Your free estimate</h2>
         <p class="lede">Under a minute. The office calls you to set a time.</p>
@@ -224,17 +213,13 @@ body{background:var(--ink);color:#fff}
 
 <section class="own">
   <div class="wrap">
-    <div class="g">
-      <img src="../../_assets/site/dor-and-segev-my-forever-builders-owners.jpg" alt="Dor and Ben Benesh, owners of Forever Builders" loading="lazy">
-      <div>
-        <div class="eyebrow">The owners</div>
-        <blockquote style="margin-top:14px">“Our goal is simple: deliver exceptional work and make the remodeling experience as enjoyable as the finished result.”</blockquote>
-        <cite>Dor &amp; Ben Benesh, Forever Builders</cite>
-      </div>
-    </div>
     <div class="peak">
-      <div><h2>Your plans, priced and scheduled.<span class="pk">Free.</span></h2><p>One short form. We review what you have and come back with an estimate and a build timeline.</p></div>
-      <a class="btn" href="#estimate" data-goto="#estimate" data-from="peak">Start my estimate <span class="arr">→</span></a>
+      <img class="ownimg" src="../../_assets/site/dor-and-segev-my-forever-builders-owners.jpg" alt="Dor and Ben Benesh, owners of Forever Builders" loading="lazy">
+      <div>
+        <h2>Get your free estimate.<span class="pk">From the plans you already have.</span></h2>
+        <p class="oq">“Our goal is simple: deliver exceptional work and make the remodeling experience as enjoyable as the finished result.” <b>Dor &amp; Ben Benesh, owners</b></p>
+      </div>
+      <a class="btn" href="#estimate" data-goto="#estimate" data-from="peak">Get my free estimate <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -257,7 +242,7 @@ body{background:var(--ink);color:#fff}
   function cl(v){return v<0?0:v>1?1:v}
   function tick(){
     var r=sec.getBoundingClientRect(),p=cl(-r.top/(r.height-innerHeight));
-    var d=cl(p/0.3);paths.forEach(function(el,i){el.style.strokeDashoffset=L[i]*(1-d)});labels.forEach(function(t){t.style.opacity=d>.8?1:0});
+    var d=0.15+0.85*cl(p/0.3);paths.forEach(function(el,i){el.style.strokeDashoffset=L[i]*(1-d)});labels.forEach(function(t){t.style.opacity=d>.8?1:0});
     frm.style.opacity=cl((p-0.33)/0.12);fin.style.opacity=cl((p-0.68)/0.12);
     bp.style.opacity=1-0.75*cl((p-0.33)/0.12);g.style.opacity=1-cl((p-0.33)/0.12);
     var k=p<0.33?0:p<0.68?1:2;li.forEach(function(e,i){e.classList.toggle('on',i===k)});

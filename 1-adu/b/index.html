@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex,nofollow">
 <title>ADU plans? We build to them · Forever Builders</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&family=Hedvig+Letters+Serif:opsz@12..24&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../_shared/fb.css">
 <style>
 body{background:var(--paper)}
@@ -17,7 +17,7 @@ body{background:var(--paper)}
 .top .btn{min-height:44px;padding:0 18px;font-size:13px}
 
 /* hero: editorial, light */
-.hero{padding:28px 0 72px}
+.hero{padding:28px 0 64px}
 .hero .g{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
 .hero h1{font-size:clamp(44px,5.4vw,80px);margin:22px 0 22px}
 .hero h1 .pk{font-family:var(--didot);font-style:italic}
@@ -32,10 +32,20 @@ body{background:var(--paper)}
 .archwrap{position:relative}
 
 /* signature: the estimate sheet fills in */
-.sheet-sec{position:relative;height:260vh;background:var(--ivory) url(../../_assets/site/white-marble-bg.webp) center/cover}
-.sheet-sec .stick{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
-.sheet-sec h2{font-size:clamp(34px,4vw,56px)}
-.sheet-sec .lead p{margin-top:16px;color:#3b3731;max-width:24em}
+.sheet-sec{position:relative;background:var(--ivory) url(../../_assets/site/white-marble-bg.webp) center/cover;padding-top:88px}
+.sheet-sec .lead{text-align:center}
+.sheet-sec .lead p{margin:14px auto 0}
+.scrub{position:relative;height:280vh}
+.sheet-sec .stick{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.arch2{position:relative;margin:0;height:min(76vh,600px);border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(60,40,10,.6)}
+.arch2 .bpbox{position:absolute;inset:0}
+.arch2 .st{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
+.arch2 .st.on{opacity:1}
+.arch2 figcaption{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;z-index:2}
+.arch2 .stage{background:var(--ink);color:var(--gold-hi);border-radius:999px;padding:8px 14px;font:800 12px var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.arch2 figcaption span{font:600 11px var(--sans);color:#fff;text-shadow:0 1px 6px #000;opacity:.85}
+.sheet-sec h2{font-size:clamp(32px,3.6vw,50px)}
+.sheet-sec .lead p{color:#3b3731;max-width:30em}
 .sheet{background:#fff;border-radius:6px;padding:34px 38px;box-shadow:0 30px 70px -30px rgba(60,40,10,.45),0 0 0 1px #eee6d7;font-size:15px;transform:rotate(-1deg)}
 .sheet header{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:6px}
 .sheet header img{width:110px}
@@ -61,9 +71,12 @@ body{background:var(--paper)}
 .steps p{color:#4a453e;font-size:15px}
 
 /* proof */
-.proof{padding:96px 0;background:#fff}
+.proof{padding:88px 0;background:#fff}
 .proof .g{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start}
 .qcol{display:grid;gap:26px}
+.closer{margin-top:64px;padding:36px 40px;border-radius:22px;background:var(--ivory);border:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.closer h2{font-size:clamp(26px,2.8vw,40px)}
+@media(max-width:900px){.closer{grid-template-columns:1fr;padding:24px 20px}.closer .btn{width:100%}}
 .qcol figure{margin:0;border-right:0;border-left:2px solid var(--gold);padding:4px 0 4px 20px}
 .qcol p{font:400 21px/1.4 var(--didot);font-style:italic}
 .qcol cite{display:block;margin-top:10px;font:800 13px var(--sans);font-style:normal}
@@ -87,8 +100,10 @@ body{background:var(--paper)}
 .qs cite span{font-weight:500;color:var(--mute)}
 
 /* the offer: peak, dark */
-.offer{background:var(--ink) url(../../_assets/site/wide-black-marble-bg.webp) center/cover;color:#fff;padding:96px 0}
-.offer .g{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.offer{background:var(--ink) url(../../_assets/site/wide-black-marble-bg.webp) center/cover;color:#fff;padding:80px 0}
+.offer .g{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px 56px;align-items:start}
+.offer .wiz{grid-column:2;grid-row:1/span 2}
+.offer .who{grid-column:1;grid-row:2;margin-top:0}
 .offer h2{font-size:clamp(38px,4.6vw,64px)}
 .offer h2 .pk{color:var(--gold-hi);font-family:var(--didot);font-style:italic}
 .offer .lead p{color:#ddd5c6;margin-top:16px;max-width:26em}
@@ -127,24 +142,36 @@ body{background:var(--paper)}
   .archwrap{order:-1;margin:0 auto;width:100%}
   .arch{aspect-ratio:16/11;border-radius:200px 200px 16px 16px}
   .arch-tag{left:12px;bottom:12px}
-  .sheet-sec{height:auto;padding:64px 0}
-  .sheet-sec .stick{position:static;height:auto;grid-template-columns:1fr;gap:28px}
-  .sheet{padding:22px 18px;transform:none}
-  .line{grid-template-columns:24px 1fr;opacity:1;transform:none}
+  .sheet-sec{padding-top:56px}
+  .scrub{height:240vh}
+  .sheet-sec .stick{grid-template-columns:1fr;grid-template-rows:auto auto;gap:14px;align-content:center;height:100svh}
+  .arch2{height:38svh;border-radius:200px 200px 16px 16px}
+  .sheet{padding:14px 16px;transform:none;font-size:14px}
+  .sheet header{padding-bottom:10px}.sheet header img{width:84px}.sheet header div b{font-size:20px}
+  .line{grid-template-columns:24px 1fr;padding:10px 0}
+  .line span.d{display:none}
+  .sheet footer{margin-top:10px;font-size:11px}
   .line .amt,.line .bar{display:none}
-  .proc,.proof,.offer,.faq{padding:64px 0}
+  .proof,.offer{padding:56px 0}
   .steps{grid-template-columns:1fr 1fr;gap:28px 18px}
   .steps h3{font-size:20px}
   .proof .g,.offer .g,.faq .g{grid-template-columns:1fr;gap:28px}
+  .offer .wiz,.offer .who{grid-column:auto;grid-row:auto}
+  .offer .lead p{display:none}
   .jl{grid-template-columns:1fr}
   .qs{grid-template-columns:1fr;gap:28px;margin-top:44px}
   .wiz{padding:22px 18px}
   .wiz .fb-q{font-size:24px}
 }
-@media (prefers-reduced-motion:reduce){.sheet-sec{height:auto;padding:96px 0}.sheet-sec .stick{position:static;height:auto}.line{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.scrub{height:auto}.sheet-sec .stick{position:static;height:auto;padding:48px var(--gut) 88px}.line{opacity:1;transform:none}.arch2 .st[data-s="3"]{opacity:1}}
+
+/* no Bodoni italic (Niv 11.11): every accent is Hedvig, upright */
+.hero h1 .pk,.offer h2 .pk,.it,.tile .n,.qcol p,.sheet header div b{font-family:var(--serif)!important;font-style:normal!important}
+.qcol p{font-size:19px}
 </style>
 <script src="../copy.js"></script>
 <script src="../../_shared/fb.js" defer></script>
+<script src="../../_shared/blueprint.js" defer></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute"><symbol id="st" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></symbol></svg>
@@ -170,49 +197,12 @@ body{background:var(--paper)}
   </div>
 </header>
 
-<section class="sheet-sec" id="sheet">
-  <div class="wrap stick">
-    <div class="lead">
-      <div class="eyebrow" style="color:var(--gold-lo)">What you get back</div>
-      <h2 style="margin-top:12px">An estimate built on <span class="it">your</span> plans.</h2>
-      <p>Not a price per square foot off a website. We read what you have, then put the build on paper.</p>
-    </div>
-    <article class="sheet" aria-label="What the free estimate covers">
-      <header><img src="../../_assets/logo.png" alt=""><div><b>Estimate</b>ADU · prepared for you</div></header>
-      <div class="line"><span class="ck">✓</span><span><strong>Your plans, reviewed</strong><span class="d">What is drawn, and what it takes to build it on your lot</span></span><span class="amt">FREE</span></div>
-      <div class="line"><span class="ck">✓</span><span><strong>The scope, line by line</strong><span class="d">Site work, foundation, framing, systems, finishes</span></span><span class="bar"></span></div>
-      <div class="line"><span class="ck">✓</span><span><strong>Your build estimate</strong><span class="d">Worked out from your plans, not a template</span></span><span class="bar"></span></div>
-      <div class="line"><span class="ck">✓</span><span><strong>A build timeline</strong><span class="d">From permits to the final inspection</span></span><span class="bar"></span></div>
-      <footer><span>Forever Builders Inc · CSLB #1037142</span><span>No obligation</span></footer>
-    </article>
-  </div>
-</section>
-
-
-<section class="proof">
-  <div class="wrap">
-    <div class="g">
-      <div class="score">
-        <div class="tile dark"><div class="n">4.9</div><div class="stars" style="margin-top:8px"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></div><div class="k">On Google</div></div>
-        <div class="tiles2"><div class="tile"><div class="n" style="font-size:40px">BBB</div><div class="k">Accredited business</div></div><div class="tile"><div class="n" style="font-size:40px">CSLB</div><div class="k">License #1037142</div></div></div>
-      </div>
-      <div class="qcol">
-        <div class="eyebrow" style="color:var(--gold-lo)">What homeowners say</div>
-        <figure><p>“Forever Builders truly exceeded expectations with the addition to my house, from start to finish. The quality of the work is outstanding.”</p><cite>Adam S. <span>· San Diego</span></cite></figure>
-        <figure><p>“We got quotes from three companies before making our final decision. We decided to go with Forever Builders due to the ease of communication with Ben.”</p><cite>Autumn P. <span>· San Diego</span></cite></figure>
-        <figure><p>“Adam my project manager was very helpful and professional. Job site was clean and completed promptly as promised!”</p><cite>Juan C. <span>· National City</span></cite></figure>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="offer" id="estimate">
   <div class="wrap g">
     <div class="lead">
       <div class="eyebrow">Your free estimate</div>
-      <h2 style="margin-top:12px">Four questions.<span class="pk">Then we take it from there.</span></h2>
+      <h2 style="margin-top:12px">Your free estimate.<span class="pk">Four quick questions.</span></h2>
       <p>Tell us where your project stands. The Forever Builders office calls you to set a time, and if you have plans, we start from them.</p>
-      <div class="who"><img src="../../_assets/site/dor-and-segev-my-forever-builders-owners.jpg" alt="Dor and Ben Benesh" loading="lazy"><p><b>Dor &amp; Ben Benesh</b>, owners. “Our goal is simple: deliver exceptional work and make the remodeling experience as enjoyable as the finished result.”</p></div>
     </div>
     <form class="wiz" id="adu-wiz" data-fbform data-wizard novalidate>
       <div class="prog" data-progress="adu-wiz"><span>Step <em class="sn" style="font-style:normal">1</em> of 4</span><i></i><span>Free</span></div>
@@ -259,8 +249,59 @@ body{background:var(--paper)}
         <div class="nav"><button type="button" class="linkbtn" data-back>← Back</button><span class="fb-fine" style="margin:0">Free · no obligation</span></div>
       </fieldset>
     </form>
+    <div class="who"><img src="../../_assets/site/dor-and-segev-my-forever-builders-owners.jpg" alt="Dor and Ben Benesh" loading="lazy"><p><b>Dor &amp; Ben Benesh</b>, owners. “Our goal is simple: deliver exceptional work and make the remodeling experience as enjoyable as the finished result.”</p></div>
   </div>
 </section>
+
+<section class="sheet-sec" id="sheet">
+  <div class="wrap lead">
+    <div class="eyebrow" style="color:var(--gold-lo)">What you get back</div>
+    <h2 style="margin-top:12px">An estimate built on <span class="it">your</span> plans.</h2>
+    <p>We read what you have, then put the whole build on paper, from the plans to the keys.</p>
+  </div>
+  <div class="scrub">
+    <div class="wrap stick">
+      <figure class="arch2" aria-label="From plans to a finished build">
+        <div class="bpbox" data-blueprint data-stroke="#9A7432" data-grid="#ece4d4" data-bg="#fbf8f2"></div>
+        <img class="st" data-s="1" src="../../_assets/site/my-forever-builders-room-addition-adu-project3.webp" alt="Framing on a Forever Builders build" loading="lazy">
+        <img class="st" data-s="2" src="../../_assets/site/my-forever-builders-room-addition-project-slider-1.webp" alt="An addition going up" loading="lazy">
+        <img class="st" data-s="3" src="../../_assets/site/my-forever-builders-room-addition-adu-project4.webp" alt="A finished interior" loading="lazy">
+        <figcaption><b class="stage">01 · Your plans</b><span>Forever Builders job sites</span></figcaption>
+      </figure>
+      <article class="sheet" aria-label="What the free estimate covers">
+        <header><img src="../../_assets/logo.png" alt=""><div><b>Free estimate</b>ADU · prepared for you</div></header>
+      <div class="line" data-s="0"><span class="ck">✓</span><span><strong>Your plans, reviewed</strong><span class="d">What is drawn, and what it takes to build it on your lot</span></span><span class="amt">FREE</span></div>
+      <div class="line" data-s="1"><span class="ck">✓</span><span><strong>The scope, line by line</strong><span class="d">Site work, foundation, framing, systems, finishes</span></span><span class="bar"></span></div>
+      <div class="line" data-s="2"><span class="ck">✓</span><span><strong>Your build estimate</strong><span class="d">Worked out from your plans, not a template</span></span><span class="bar"></span></div>
+      <div class="line" data-s="3"><span class="ck">✓</span><span><strong>A build timeline</strong><span class="d">From permits to the final inspection</span></span><span class="bar"></span></div>
+        <footer><span>Forever Builders Inc · CSLB #1037142</span><span>No obligation</span></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="proof">
+  <div class="wrap">
+    <div class="g">
+      <div class="score">
+        <div class="tile dark"><div class="n">4.9</div><div class="stars" style="margin-top:8px"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></div><div class="k">On Google</div></div>
+        <div class="tiles2"><div class="tile"><div class="n" style="font-size:40px">BBB</div><div class="k">Accredited business</div></div><div class="tile"><div class="n" style="font-size:40px">CSLB</div><div class="k">License #1037142</div></div></div>
+      </div>
+      <div class="qcol">
+        <div class="eyebrow" style="color:var(--gold-lo)">What homeowners say</div>
+        <figure><p>“Forever Builders truly exceeded expectations with the addition to my house, from start to finish. The quality of the work is outstanding.”</p><cite>Adam S. <span>· San Diego</span></cite></figure>
+        <figure><p>“We got quotes from three companies before making our final decision. We decided to go with Forever Builders due to the ease of communication with Ben.”</p><cite>Autumn P. <span>· San Diego</span></cite></figure>
+        <figure><p>“Adam my project manager was very helpful and professional. Job site was clean and completed promptly as promised!”</p><cite>Juan C. <span>· National City</span></cite></figure>
+      </div>
+    </div>
+    <div class="closer">
+      <h2>Get your free estimate.<span class="pk">From the plans you already have.</span></h2>
+      <a class="btn" href="#estimate" data-goto="#estimate" data-from="end">Get my free estimate <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
 
 
 <footer class="foot">
@@ -274,13 +315,19 @@ body{background:var(--paper)}
 (function(){
   var f=document.getElementById('adu-wiz'),sn=f.querySelector('.sn');
   new MutationObserver(function(){sn.textContent=(+f.getAttribute('data-at')||0)+1}).observe(f,{attributes:true,attributeFilter:['data-at']});
-  var sec=document.getElementById('sheet'),lines=[].slice.call(sec.querySelectorAll('.line'));
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches||innerWidth<=900){
-    if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){lines.forEach(function(l){l.style.opacity='';});
-      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -15% 0px'});lines.forEach(function(l){io.observe(l)})}
-    else lines.forEach(function(l){l.classList.add('on')});return}
-  function tick(){var r=sec.getBoundingClientRect(),p=Math.max(0,Math.min(1,-r.top/(r.height-innerHeight)));lines.forEach(function(l,i){l.classList.toggle('on',p>i*0.2+0.05)})}
-  addEventListener('scroll',function(){requestAnimationFrame(tick)},{passive:true});tick();
+  var sec=document.querySelector('#sheet .scrub'),lines=[].slice.call(sec.querySelectorAll('.line')),imgs=[].slice.call(sec.querySelectorAll('.arch2 .st')),stage=sec.querySelector('.stage');
+  var names=['01 · Your plans','02 · Framing','03 · Structure','04 · Finished'],bp=null,last=-1;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){lines.forEach(function(l){l.classList.add('on')});stage.textContent=names[3];return}
+  function tick(){
+    bp=bp||(sec.querySelector('.bpbox').__bp);
+    var r=sec.getBoundingClientRect(),p=Math.max(0,Math.min(1,-r.top/(r.height-innerHeight)));
+    var k=Math.min(3,Math.floor(p*4));
+    if(bp)bp.set(Math.min(1,0.15+p*4));
+    lines.forEach(function(l,i){l.classList.toggle('on',i<=k&&p>0.02)});
+    imgs.forEach(function(im){im.classList.toggle('on',+im.getAttribute('data-s')<=k)});
+    if(k!==last){stage.textContent=names[k];last=k}
+  }
+  addEventListener('scroll',function(){requestAnimationFrame(tick)},{passive:true});addEventListener('load',tick);tick();
 })();
 </script>
 </body>

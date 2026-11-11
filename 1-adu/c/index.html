@@ -46,15 +46,25 @@ body{background:var(--ink);color:#fff}
 .quiz[data-at="0"] .dots i:nth-child(-n+1),.quiz[data-at="1"] .dots i:nth-child(-n+2),.quiz[data-at="2"] .dots i:nth-child(-n+3),.quiz[data-at="3"] .dots i{background:var(--gold)}
 
 /* below: proof as a quiet, scrolling story */
-.strip{padding:72px 0 24px}
+.strip{padding:80px 0 24px}
 .strip h2,.jobs h2,.vo h2{font-size:clamp(30px,3.6vw,48px)}
 .strip .head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}
 .strip .head p{color:#a9a296;font-size:14px}
 .reel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gut) 18px;scrollbar-width:none}
 .reel::-webkit-scrollbar{display:none}
-.reel figure{flex:none;width:min(360px,78vw);margin:0;scroll-snap-align:start;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5}
+.reel figure{flex:none;width:min(360px,78vw);margin:0;scroll-snap-align:start;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;opacity:.35;transform:scale(.97);transition:opacity .5s,transform .5s}
+.reel figure.on{opacity:1;transform:none}
+.reel .bpbox{position:absolute;inset:0}
+.tl{margin-bottom:18px}
+.tlbar{height:4px;border-radius:2px;background:#2a2a2e;overflow:hidden}
+.tlbar i{display:block;height:100%;width:calc(var(--p,0) * 100%);background:var(--gold-grad);transition:width .5s}
+@media(min-width:901px){
+  .reel{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;overflow:visible;max-width:var(--max);margin:0 auto;padding:0 var(--gut) 18px}
+  .reel figure{width:auto}
+  .strip .hint{display:none}
+}
 .reel img{width:100%;height:100%;object-fit:cover}
-.reel figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.8));font:700 13px var(--sans)}
+.reel figcaption{z-index:1;position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.8));font:700 13px var(--sans)}
 .reel figcaption b{display:block;font:800 11px var(--sans);letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
 .jobs{padding:64px 0}
 .jobs .g{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
@@ -62,7 +72,7 @@ body{background:var(--ink);color:#fff}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{border:1px solid #3a3a3f;border-radius:999px;padding:10px 16px;font:600 14px var(--sans);background:#141416}
 .chip b{color:var(--gold);font-weight:800;margin-right:6px}
-.vo{padding:64px 0 96px}
+.vo{padding:72px 0 88px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
 .card{background:#161618;border:1px solid #2a2a2e;border-radius:16px;padding:24px}
 .card p{font-size:16px;color:#e9e4da}
@@ -101,6 +111,7 @@ body{background:var(--ink);color:#fff}
 </style>
 <script src="../copy.js"></script>
 <script src="../../_shared/fb.js" defer></script>
+<script src="../../_shared/blueprint.js" defer></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute"><defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#FFD58A"/><stop offset="1" stop-color="#B98A3E"/></linearGradient></defs><symbol id="st" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></symbol></svg>
@@ -175,14 +186,14 @@ body{background:var(--ink);color:#fff}
   </div>
 </section>
 
-<section class="strip">
-  <div class="wrap head"><h2>On our job sites.</h2><p>Swipe · real Forever Builders photos</p></div>
+<section class="strip" id="proc">
+  <div class="wrap head"><h2>From your plans to the keys.</h2><p class="hint">Swipe · real Forever Builders job sites</p></div>
+  <div class="wrap tl" aria-hidden="true"><div class="tlbar"><i></i></div></div>
   <div class="reel">
-    <figure><img src="../../_assets/site/my-forever-builders-room-addition-adu-project3.webp" alt="Framing inside a build" loading="lazy"><figcaption><b>Framing</b>Our crew, our project manager</figcaption></figure>
-    <figure><img src="../../_assets/site/my-forever-builders-room-addition-project-slider-1.webp" alt="A two-story addition in sheathing" loading="lazy"><figcaption><b>Structure</b>A two-story addition going up</figcaption></figure>
-    <figure><img src="../../_assets/site/my-forever-builders-room-addition-adu-project2.webp" alt="Exterior sheathing on a build" loading="lazy"><figcaption><b>Shell</b>Sheathed and ready for systems</figcaption></figure>
-    <figure><img src="../../_assets/site/my-forever-builders-room-addition-adu-project4.webp" alt="A finished kitchen" loading="lazy"><figcaption><b>Finished</b>Inspected and handed over</figcaption></figure>
-    <figure><img src="../../_assets/site/my-forever-builders-room-addition-family-room.webp" alt="A finished family room" loading="lazy"><figcaption><b>Finished</b>Ready to live in</figcaption></figure>
+    <figure data-i="0"><div class="bpbox" data-blueprint data-auto data-stroke="#FFD07B" data-grid="#24324a" data-bg="#0f1726"></div><figcaption><b>01 · Your plans</b>We start from what you have</figcaption></figure>
+    <figure data-i="1"><img src="../../_assets/site/my-forever-builders-room-addition-adu-project3.webp" alt="Framing inside a build" loading="lazy"><figcaption><b>02 · Framing</b>Our crew, our project manager</figcaption></figure>
+    <figure data-i="2"><img src="../../_assets/site/my-forever-builders-room-addition-project-slider-1.webp" alt="An addition going up" loading="lazy"><figcaption><b>03 · Structure</b>Permits done, the build goes up</figcaption></figure>
+    <figure data-i="3"><img src="../../_assets/site/my-forever-builders-room-addition-adu-project4.webp" alt="A finished interior" loading="lazy"><figcaption><b>04 · Finished</b>Inspected and handed over</figcaption></figure>
   </div>
 </section>
 
@@ -197,8 +208,8 @@ body{background:var(--ink);color:#fff}
     </div>
     <div class="end">
       <img src="../../_assets/site/dor-and-segev-my-forever-builders-owners.jpg" alt="Dor and Ben Benesh" loading="lazy">
-      <div><h3>Your plans, priced and scheduled. Free.</h3><p>“Our goal is simple: deliver exceptional work and make the remodeling experience as enjoyable as the finished result.” Dor &amp; Ben Benesh, owners</p></div>
-      <a class="btn" href="#adu-quiz" data-goto="#adu-quiz" data-from="end">Start the 4 questions <span class="arr">→</span></a>
+      <div><h3>Get your free estimate.<span class="pk" style="display:block">From the plans you already have.</span></h3><p>“Our goal is simple: deliver exceptional work and make the remodeling experience as enjoyable as the finished result.” Dor &amp; Ben Benesh, owners</p></div>
+      <a class="btn" href="#adu-quiz" data-goto="#adu-quiz" data-from="end">Get my free estimate <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -211,6 +222,15 @@ body{background:var(--ink);color:#fff}
 </footer>
 
 <script>
+/* process strip: desktop plays once in view, phone follows the swipe */
+(function(){
+  var sec=document.getElementById('proc'),reel=sec.querySelector('.reel'),cards=[].slice.call(reel.children),bar=sec.querySelector('.tlbar');
+  function show(k){cards.forEach(function(c,i){c.classList.toggle('on',i<=k)});bar.style.setProperty('--p',((k+1)/cards.length).toFixed(3))}
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){show(3);return}
+  if(innerWidth>900){var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();var k=0;show(0);var t=setInterval(function(){k++;show(k);if(k>=3)clearInterval(t)},1100)},{threshold:.45});io.observe(reel);return}
+  show(0);
+  reel.addEventListener('scroll',function(){var w=cards[0].offsetWidth+14;show(Math.min(3,Math.round(reel.scrollLeft/w)))},{passive:true});
+})();
 /* the brand house builds with each answer: ground, walls, roof, door */
 (function(){
   var f=document.getElementById('adu-quiz'),parts=[0,1,2,3].map(function(i){return document.querySelector('.house .p'+i)});
