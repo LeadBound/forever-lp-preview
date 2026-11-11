@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-page="kitchen-thanks" data-endpoint="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Thank you · Forever Builders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../_shared/fb.css">
+<style>
+body{background:#0b0b0c url(../../_assets/site/wide-black-marble-bg.webp) center/cover fixed;color:#fff;min-height:100svh;display:flex;flex-direction:column}
+main{flex:1;display:grid;place-items:center;padding:40px var(--gut)}
+.box{max-width:620px;width:100%}
+.box>img{width:120px;margin-bottom:40px}
+.ok{width:64px;height:64px;border-radius:50%;background:var(--gold-grad);display:grid;place-items:center;color:#1a1408;font-size:30px;font-weight:800;margin-bottom:24px}
+h1{font-size:clamp(38px,6vw,60px)}
+h1 .pk{display:inline}
+.lead{font-size:18px;color:#e2dccf;margin-top:16px}
+ol{list-style:none;padding:0;margin:36px 0 0;display:grid;gap:14px;counter-reset:n}
+li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;padding:18px;border:1px solid rgba(220,175,94,.3);border-radius:14px;background:rgba(20,20,22,.7)}
+li::before{counter-increment:n;content:counter(n);width:32px;height:32px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-weight:800}
+li b{display:block;margin-bottom:2px}
+li span{color:#cfc8bb;font-size:15px}
+li a{color:var(--gold-hi);font-weight:700;text-decoration:none}
+</style>
+<script src="../copy.js"></script>
+<script src="../../_shared/fb.js" defer></script>
+</head>
+<body>
+<main>
+  <div class="box">
+    <img src="../../_assets/logo.png" alt="Forever Builders Home Remodeling">
+    <div class="ok">✓</div>
+    <h1>Thank you<span id="nm"></span>.<br><span class="pk">Your request is in.</span></h1>
+    <p class="lead">The Forever Builders office has your details and will call you to set a time.</p>
+    <ol>
+      <li><span><b>We call you</b><span>From the Forever Builders office, to hear about your project and set a time.</span></span></li>
+      <li><span><b>Have photos or ideas? Send them over</b><span>Email them to <a href="mailto:info@myforeverbuilders.com">info@myforeverbuilders.com</a> and we start from them.</span></span></li>
+      <li><span><b>Your estimate and timeline</b><span>Free, for the rooms you want to change, with no obligation.</span></span></li>
+    </ol>
+    <p class="lead" style="font-size:15px;margin-top:28px">Rather talk now? <a href="tel:+18332435624" style="color:var(--gold-hi);font-weight:700;text-decoration:none">(833) 243-5624</a></p>
+  </div>
+</main>
+<footer class="foot"><div class="wrap"><img src="../../_assets/logo.png" alt="Forever Builders"><div class="legal"><span>Forever Builders Inc · CSLB #1037142</span><span>7812 Miramar Rd, San Diego, CA 92126</span><a href="tel:+18332435624">(833) 243-5624</a></div></div></footer>
+<script>
+try{var n=sessionStorage.getItem('fb_first');if(n)document.getElementById('nm').textContent=', '+n.replace(/[<>]/g,'').slice(0,30)}catch(e){}
+addEventListener('DOMContentLoaded',function(){window.FB&&FB.track('thanks_view')});
+</script>
+</body>
+</html>
