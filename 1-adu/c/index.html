@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en" data-page="adu-c" data-endpoint="" data-lead-endpoint="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>ADU plans? We build to them · Forever Builders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../_shared/fb.css">
+<style>
+body{background:var(--ink);color:#fff}
+/* hero = the questionnaire */
+.stage{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:hidden}
+.stage .bg{position:absolute;inset:0;background:75% 30%/cover no-repeat;transform:scale(1.04)}
+.stage .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,11,.96) 0%,rgba(10,10,11,.86) 48%,rgba(10,10,11,.45) 100%)}
+.bar{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:18px var(--gut)}
+.bar img{width:118px}
+.bar .proofrow{color:#e9e4da;font-size:13px}
+.main{position:relative;z-index:2;flex:1;display:grid;grid-template-columns:1fr 440px;gap:64px;align-items:center;width:100%;max-width:var(--max);margin:0 auto;padding:12px var(--gut) 48px}
+.main h1{font-size:clamp(40px,4.1vw,60px)}
+.main .sub{font-size:18px;color:#e2dccf;margin-top:18px;max-width:28em}
+.house{margin-top:34px;display:flex;align-items:center;gap:18px}
+.house svg{width:92px;height:80px;flex:none}
+.house path{fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke:#3a3a3f;transition:stroke .45s}
+.house .on{stroke:var(--gold)}
+.house .rf.on{stroke:url(#gg)}
+.house p{font:600 14px/1.45 var(--sans);color:#cfc8bb;max-width:20em}
+.house b{color:#fff}
+.quiz{background:rgba(20,20,22,.92);backdrop-filter:blur(8px);border:1px solid rgba(220,175,94,.35);border-radius:22px;padding:26px 24px;box-shadow:0 40px 80px -30px #000}
+.qhead{display:flex;justify-content:space-between;font:800 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.qhead span:last-child{color:#a9a296}
+.quiz .fb-q{font:400 30px/1.12 var(--serif);margin-bottom:18px}
+.quiz .opts{gap:10px}
+.quiz .opt{background:#1f1f22;border-color:#38383d;color:#fff;min-height:58px;font-size:16px;justify-content:space-between}
+.quiz .opt::before{display:none}
+.quiz .opt::after{content:"→";color:var(--gold);font-weight:800;opacity:.6}
+.quiz .opt[aria-pressed="true"]{border-color:var(--gold);background:#2a2418}
+.quiz .fb-field input{background:#1f1f22;border-color:#38383d;color:#fff}
+.quiz .fb-step[hidden]{display:none}
+.quiz .back{background:none;border:0;color:#a9a296;font:700 14px var(--sans);padding:12px 0 0;cursor:pointer}
+.quiz .fb-fine{color:#a9a296}
+.dots{display:flex;gap:6px;margin-bottom:16px}
+.dots i{flex:1;height:4px;border-radius:2px;background:#333}
+.quiz[data-at="0"] .dots i:nth-child(-n+1),.quiz[data-at="1"] .dots i:nth-child(-n+2),.quiz[data-at="2"] .dots i:nth-child(-n+3),.quiz[data-at="3"] .dots i{background:var(--gold)}
+
+/* below: proof as a quiet, scrolling story */
+.strip{padding:72px 0 24px}
+.strip h2,.jobs h2,.vo h2{font-size:clamp(30px,3.6vw,48px)}
+.strip .head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}
+.strip .head p{color:#a9a296;font-size:14px}
+.reel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gut) 18px;scrollbar-width:none}
+.reel::-webkit-scrollbar{display:none}
+.reel figure{flex:none;width:min(360px,78vw);margin:0;scroll-snap-align:start;position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5}
+.reel img{width:100%;height:100%;object-fit:cover}
+.reel figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.8));font:700 13px var(--sans)}
+.reel figcaption b{display:block;font:800 11px var(--sans);letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.jobs{padding:64px 0}
+.jobs .g{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.jobs p.note{color:#a9a296;margin-top:14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid #3a3a3f;border-radius:999px;padding:10px 16px;font:600 14px var(--sans);background:#141416}
+.chip b{color:var(--gold);font-weight:800;margin-right:6px}
+.vo{padding:64px 0 96px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.card{background:#161618;border:1px solid #2a2a2e;border-radius:16px;padding:24px}
+.card p{font-size:16px;color:#e9e4da}
+.card cite{display:block;margin-top:14px;font:800 13px var(--sans);font-style:normal}
+.card cite span{color:#a9a296;font-weight:500}
+.card .stars{margin-bottom:12px}
+.end{margin-top:56px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:28px;border-radius:20px;background:linear-gradient(135deg,#2a2213,#141210);border:1px solid rgba(255,208,123,.45)}
+.end img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:2px solid var(--gold)}
+.end h3{font-size:clamp(24px,2.6vw,34px)}
+.end p{color:#ddd5c6;margin-top:6px;font-size:15px}
+
+@media (max-width:900px){
+  .stage{min-height:auto}
+  .stage .bg::after{background:linear-gradient(180deg,rgba(10,10,11,.6) 0%,rgba(10,10,11,.9) 40%,#0a0a0b 70%)}
+  .bar{padding:14px var(--gut)}.bar img{width:100px}
+  .bar .proofrow{display:none}
+  .main{grid-template-columns:1fr;gap:22px;padding:4px var(--gut) 40px}
+  .main h1{font-size:36px}
+  .main .sub{font-size:16px;margin-top:12px}
+  .house{margin-top:18px}.house svg{width:64px;height:56px}.house p{font-size:13px}
+  .quiz{padding:20px 16px}
+  .quiz .fb-q{font-size:25px}
+  .mproof{display:flex!important}
+  .strip{padding:48px 0 12px}
+  .strip .head{flex-direction:column;align-items:start}
+  .jobs{padding:44px 0}
+  .jobs .g{grid-template-columns:1fr;gap:20px}
+  .chip{font-size:13px;padding:9px 13px}
+  .vo{padding:44px 0 64px}
+  .cards{grid-template-columns:1fr}
+  .end{grid-template-columns:auto 1fr;padding:22px 18px}
+  .end img{width:64px;height:64px}
+  .end .btn{grid-column:1/-1;width:100%}
+}
+.mproof{display:none;justify-content:center;gap:8px 14px;flex-wrap:wrap;font:600 12.5px var(--sans);color:#cfc8bb;margin-top:14px}
+</style>
+<script src="../copy.js"></script>
+<script src="../../_shared/fb.js" defer></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#FFD58A"/><stop offset="1" stop-color="#B98A3E"/></linearGradient></defs><symbol id="st" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></symbol></svg>
+
+<section class="stage">
+  <div class="bg" data-k-bg="hero" style="background-image:url(../../_assets/site/my-forever-builders-room-addition-adu-project.webp)"></div>
+  <div class="bar">
+    <img src="../../_assets/logo.png" alt="Forever Builders Home Remodeling">
+    <div class="proofrow"><span><span class="stars"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></span> <b>4.9</b> Google · 95 reviews</span><span class="sep"></span><span><b>BBB</b> Accredited</span><span class="sep"></span><span>CSLB <b>#1037142</b></span></div>
+  </div>
+  <div class="main">
+    <div>
+      <div class="eyebrow" data-k="eyebrow">ADU design and build · San Diego County</div>
+      <h1 data-k="h1" style="margin-top:14px">Already have ADU&nbsp;plans?<span class="pk">We’ll build to them.</span></h1>
+      <p class="sub" data-k="sub">Send us what you have. We come back with a free estimate and a build timeline, worked out from your plans, not a template.</p>
+      <div class="house" aria-hidden="true">
+        <svg viewBox="0 0 100 86"><path class="p0" d="M10 80H90"/><path class="p1" d="M22 80V44M78 80V44"/><path class="p2 rf" d="M6 48L50 12L94 48"/><path class="p3" d="M42 80V60H58V80"/></svg>
+        <p><b>Four questions.</b> Every answer helps us come back with an estimate that fits your project.</p>
+      </div>
+    </div>
+    <form class="quiz" id="adu-quiz" data-fbform data-wizard novalidate>
+      <div class="dots"><i></i><i></i><i></i><i></i></div>
+      <div class="fb-step" role="group" data-step="plans">
+        <div class="qhead"><span>Free estimate</span><span>1 / 4</span></div>
+        <h2 class="fb-q">Where are your ADU plans today?</h2>
+        <div class="opts">
+          <button class="opt" data-opt="approved">Approved, ready to build</button>
+          <button class="opt" data-opt="submitted">Submitted, waiting on approval</button>
+          <button class="opt" data-opt="drawing">Being drawn now</button>
+          <button class="opt" data-opt="none">No plans yet</button>
+        </div>
+      </div>
+      <div class="fb-step" role="group" data-step="type">
+        <div class="qhead"><span>Free estimate</span><span>2 / 4</span></div>
+        <h2 class="fb-q">What would you build?</h2>
+        <div class="opts">
+          <button class="opt" data-opt="detached">Detached ADU</button>
+          <button class="opt" data-opt="attached">Attached ADU</button>
+          <button class="opt" data-opt="garage">Garage conversion</button>
+          <button class="opt" data-opt="junior">Junior ADU, inside the house</button>
+          <button class="opt" data-opt="unsure">Not sure yet</button>
+        </div>
+        <button type="button" class="back" data-back>← Back</button>
+      </div>
+      <div class="fb-step" role="group" data-step="timing">
+        <div class="qhead"><span>Free estimate</span><span>3 / 4</span></div>
+        <h2 class="fb-q">When would you like to start?</h2>
+        <div class="opts">
+          <button class="opt" data-opt="0-3">In the next 3 months</button>
+          <button class="opt" data-opt="3-6">In 3 to 6 months</button>
+          <button class="opt" data-opt="6-12">In 6 to 12 months</button>
+          <button class="opt" data-opt="exploring">Just exploring</button>
+        </div>
+        <button type="button" class="back" data-back>← Back</button>
+      </div>
+      <div class="fb-step" role="group" data-step="contact">
+        <div class="qhead"><span>Last step</span><span>4 / 4</span></div>
+        <h2 class="fb-q">Who do we call?</h2>
+        <label class="fb-field"><span>Full name</span><input name="name" autocomplete="name" required data-focus></label>
+        <div class="row2">
+          <label class="fb-field"><span>Phone</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+          <label class="fb-field"><span>Property ZIP</span><input name="zip" inputmode="numeric" maxlength="5" autocomplete="postal-code" required></label>
+        </div>
+        <label class="fb-field"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+        <label class="fb-file"><span data-fname>Attach your plans (optional)</span><input type="file" name="plans" accept=".pdf,image/*"></label>
+        <button class="btn btn-wide" type="submit"><span data-k="cta">Get my free estimate</span> <span class="arr">→</span></button>
+        <button type="button" class="back" data-back>← Back</button>
+      </div>
+      <div class="mproof"><span><span class="stars"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></span> <b>4.9</b> Google · 95</span><span><b>BBB</b> Accredited</span><span>CSLB #1037142</span></div>
+    </form>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap head"><h2>On our job sites.</h2><p>Swipe · real Forever Builders photos</p></div>
+  <div class="reel">
+    <figure><img src="../../_assets/site/my-forever-builders-room-addition-adu-project3.webp" alt="Framing inside a build" loading="lazy"><figcaption><b>Framing</b>Our crew, our project manager</figcaption></figure>
+    <figure><img src="../../_assets/site/my-forever-builders-room-addition-project-slider-1.webp" alt="A two-story addition in sheathing" loading="lazy"><figcaption><b>Structure</b>A two-story addition going up</figcaption></figure>
+    <figure><img src="../../_assets/site/my-forever-builders-room-addition-adu-project2.webp" alt="Exterior sheathing on a build" loading="lazy"><figcaption><b>Shell</b>Sheathed and ready for systems</figcaption></figure>
+    <figure><img src="../../_assets/site/my-forever-builders-room-addition-adu-project4.webp" alt="A finished kitchen" loading="lazy"><figcaption><b>Finished</b>Inspected and handed over</figcaption></figure>
+    <figure><img src="../../_assets/site/my-forever-builders-room-addition-family-room.webp" alt="A finished family room" loading="lazy"><figcaption><b>Finished</b>Ready to live in</figcaption></figure>
+  </div>
+</section>
+
+<section class="jobs">
+  <div class="wrap g">
+    <div><div class="eyebrow">From our own contracts</div><h2 style="margin-top:12px">ADUs and additions we’ve built.</h2><p class="note">Street and year only. House numbers and names stay with us.</p></div>
+    <div class="chips">
+      <span class="chip"><b>ADU</b>Fowles St, Oceanside · 2024</span>
+      <span class="chip"><b>Addition</b>49th St, San Diego · 2024</span>
+      <span class="chip"><b>Room addition</b>Chaz Pl, La Mesa · 2024</span>
+      <span class="chip"><b>Addition</b>Mount Gaywas Dr, San Diego · 2023</span>
+      <span class="chip"><b>Addition</b>Terra Nova Dr, Chula Vista · 2023</span>
+      <span class="chip"><b>Room addition</b>Bluewater Rd, Carlsbad · 2023</span>
+      <span class="chip"><b>Room addition</b>Epinette Ave, San Diego · 2022</span>
+    </div>
+  </div>
+</section>
+
+<section class="vo">
+  <div class="wrap">
+    <h2>4.9 on Google, from 95 reviews.</h2>
+    <div class="cards">
+      <figure class="card" style="margin:0"><div class="stars"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></div><p>“Forever Builders truly exceeded expectations with the addition to my house, from start to finish. The quality of the work is outstanding.”</p><cite>Adam S. <span>· San Diego</span></cite></figure>
+      <figure class="card" style="margin:0"><div class="stars"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></div><p>“We got quotes from three companies before making our final decision. We decided to go with Forever Builders due to the ease of communication with Ben.”</p><cite>Autumn P. <span>· San Diego</span></cite></figure>
+      <figure class="card" style="margin:0"><div class="stars"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></div><p>“Adam my project manager was very helpful and professional. Job site was clean and completed promptly as promised!”</p><cite>Juan C. <span>· National City</span></cite></figure>
+    </div>
+    <div class="end">
+      <img src="../../_assets/site/dor-and-segev-my-forever-builders-owners.jpg" alt="Dor and Ben Benesh" loading="lazy">
+      <div><h3>Your plans, priced and scheduled. Free.</h3><p>Dor &amp; Ben Benesh, owners · Forever Builders</p></div>
+      <a class="btn" href="#adu-quiz" data-goto="#adu-quiz" data-from="end">Start the 4 questions <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="../../_assets/logo.png" alt="Forever Builders">
+    <div class="legal"><span>Forever Builders Inc · CSLB #1037142</span><span>7812 Miramar Rd, San Diego, CA 92126</span><a href="tel:+18332435624">(833) 243-5624</a></div>
+  </div>
+</footer>
+
+<script>
+/* the brand house builds with each answer: ground, walls, roof, door */
+(function(){
+  var f=document.getElementById('adu-quiz'),parts=[0,1,2,3].map(function(i){return document.querySelector('.house .p'+i)});
+  function paint(){var at=+f.getAttribute('data-at')||0;parts.forEach(function(p,i){p.classList.toggle('on',i<=at)})}
+  new MutationObserver(paint).observe(f,{attributes:true,attributeFilter:['data-at']});paint();
+})();
+</script>
+</body>
+</html>

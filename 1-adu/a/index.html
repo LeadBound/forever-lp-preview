@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en" data-page="adu-a" data-endpoint="" data-lead-endpoint="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>ADU plans? We build to them · Forever Builders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../_shared/fb.css">
+<style>
+body{background:var(--ink);color:#fff}
+.hero{position:relative;background:#0b0b0c url(../../_assets/site/wide-black-marble-bg.webp) center/cover;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold-grad)}
+.top{position:relative;z-index:3;padding:18px var(--gut) 8px}
+.top img{width:132px}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-bottom:56px}
+.hero h1{font-size:clamp(40px,4.1vw,60px);margin:16px 0 20px}
+.hero .sub{font-size:19px;max-width:30em;color:#e9e4da}
+.hero .proofrow{margin-top:34px;color:#e9e4da}
+.photo{position:relative;border-radius:18px;overflow:hidden;height:320px;box-shadow:0 40px 80px -30px #000}
+.photo img{object-position:50% 30%}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo figcaption{position:absolute;left:14px;bottom:12px;font:600 12px var(--sans);letter-spacing:.04em;color:#fff;opacity:.85;text-shadow:0 1px 6px #000}
+.right{position:relative}
+.card{position:relative;margin:-96px 0 0 -48px;z-index:2;background:rgba(18,18,19,.94);backdrop-filter:blur(6px);border:1px solid rgba(220,175,94,.45);border-radius:18px;padding:26px 24px 22px;box-shadow:0 30px 60px -20px #000}
+.card h2{font-size:26px;margin:0 0 2px}
+.card .lede{font-size:14px;color:#cfc8bb;margin:0 0 14px}
+.card .opts{grid-template-columns:1fr 1fr}
+.card .opt{background:#1d1d20;border-color:#36363b;color:#fff;font-size:14px;min-height:50px}
+.card .opt[aria-pressed="true"]{background:#2a2418;border-color:var(--gold)}
+.card .fb-field input{background:#1d1d20;border-color:#36363b;color:#fff}
+.card .fb-step{margin-bottom:16px}
+.card .fb-fine{color:#cfc8bb}
+.card .fb-fine a{color:var(--gold-hi);text-decoration:none;font-weight:700}
+
+/* signature: plans -> framing -> finished */
+.build{position:relative;height:320vh;background:var(--ink)}
+.build .stick{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.stages{list-style:none;margin:0;padding:0;display:grid;gap:34px}
+.stages li{opacity:.28;transition:opacity .35s;border-left:2px solid #333;padding-left:22px}
+.stages li.on{opacity:1;border-color:var(--gold)}
+.stages .n{font:800 12px var(--sans);letter-spacing:.16em;color:var(--gold)}
+.stages h3{font-size:clamp(26px,3vw,40px);margin:6px 0 8px}
+.stages p{color:#cfc8bb;max-width:26em}
+.frame{position:relative;aspect-ratio:4/5;max-height:82vh;border-radius:18px;overflow:hidden;background:#101826;justify-self:end;width:100%}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+.frame svg{position:absolute;inset:0;width:100%;height:100%}
+.frame .bp{stroke:var(--gold-hi);fill:none;stroke-width:2.2}
+.frame .bp.thin{stroke-width:1;opacity:.7}
+.frame text{fill:var(--gold-hi);font:700 11px var(--sans);letter-spacing:.14em}
+.frame .grid{stroke:#2a3a55;stroke-width:1}
+.frame figcaption{position:absolute;right:12px;bottom:10px;font:600 11px var(--sans);opacity:.75;z-index:2}
+.build-head{position:absolute;top:0;left:0;right:0}
+
+/* jobs */
+.jobs{background:var(--ink-2);padding:96px 0}
+.jobs h2,.rev h2,.own h2{font-size:clamp(34px,4vw,54px)}
+.jobs .intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:40px}
+.jobs .intro p{color:#cfc8bb}
+.joblist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-d)}
+.joblist li{display:grid;grid-template-columns:200px 1fr 80px;gap:16px;padding:20px 0;border-bottom:1px solid var(--line-d);align-items:baseline}
+.joblist .t{font:800 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.joblist .s{font-family:var(--serif);font-size:clamp(22px,2.4vw,30px)}
+.joblist .s small{font:500 15px var(--sans);color:#a9a296;margin-left:10px}
+.joblist .y{text-align:right;font:700 15px var(--sans);color:#a9a296}
+
+/* reviews on ivory marble */
+.rev{background:var(--ivory) url(../../_assets/site/white-marble-bg.webp) center/cover;color:var(--text);padding:96px 0}
+.rev-top{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-bottom:44px}
+.big{font-family:var(--serif);font-size:120px;line-height:.85}
+.rev-top .stars svg{width:22px;height:22px}
+.badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.badge{border:1px solid #d8cdb8;background:rgba(255,255,255,.7);border-radius:999px;padding:8px 16px;font:700 13px var(--sans)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.q{background:#fff;border-radius:16px;padding:26px;box-shadow:0 20px 40px -28px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:16px}
+.q p{font-size:16px}
+.q cite{font:800 14px var(--sans);font-style:normal;margin-top:auto}
+.q cite span{display:block;font-weight:500;color:var(--mute)}
+
+/* owners + the offer, the peak */
+.own{background:var(--ink) url(../../_assets/site/wide-black-marble-bg.webp) center/cover;padding:96px 0}
+.own .g{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center}
+.own img{border-radius:16px;border:1px solid rgba(220,175,94,.5);width:100%}
+.own blockquote{margin:0;font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);line-height:1.3}
+.own cite{display:block;margin-top:16px;font:700 14px var(--sans);font-style:normal;color:var(--gold)}
+.peak{margin-top:72px;border-radius:22px;padding:48px;background:linear-gradient(135deg,#2a2213,#16130d 60%);border:1px solid rgba(255,208,123,.5);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.peak h2{font-size:clamp(32px,3.6vw,50px)}
+.peak p{color:#e5dccb;margin-top:10px;max-width:34em}
+
+@media (max-width:900px){
+  .top{padding:16px var(--gut) 0}.top img{width:112px}
+  .hero-grid{position:static;grid-template-columns:1fr;gap:0;padding-bottom:48px}
+  .hero .proofrow .sep{display:none}
+  .hero h1{margin:10px 0 14px}
+  .hero .sub{font-size:17px}
+  .hero .proofrow{margin-top:20px;font-size:13px;gap:8px 14px}
+  .photo{position:absolute;inset:0 0 auto 0;border-radius:0;height:560px;box-shadow:none;z-index:0}
+  .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.55) 0%,rgba(11,11,12,.75) 55%,#0b0b0c 100%)}
+  .photo figcaption{display:none}
+  .left{position:relative;z-index:2;padding-top:6px}
+  .right{position:static}
+  .card{margin:28px 0 0;padding:22px 18px 18px}
+  .card .opts{grid-template-columns:1fr 1fr;gap:8px}
+  .card .opt{font-size:13.5px;padding:10px 12px;gap:8px}
+  .card .opt::before{width:14px;height:14px}
+  .build{height:240vh}
+  .build .stick{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:18px;align-content:start;padding-top:18px}
+  .frame{max-height:none;height:58vh;aspect-ratio:auto;order:-1}
+  .stages{gap:0;position:relative;min-height:170px}
+  .stages li{position:absolute;inset:0 0 auto 0;opacity:0;border:0;padding:0}
+  .stages li.on{opacity:1}
+  .jobs,.rev,.own{padding:64px 0}
+  .jobs .intro{grid-template-columns:1fr;gap:14px}
+  .joblist li{grid-template-columns:1fr auto;gap:2px 12px}
+  .joblist .t{grid-column:1/-1}
+  .joblist .s small{display:block;margin:2px 0 0}
+  .rev-top{grid-template-columns:1fr;gap:10px}
+  .big{font-size:88px}
+  .quotes{grid-template-columns:1fr}
+  .own .g{grid-template-columns:1fr;gap:28px}
+  .own img{max-width:240px}
+  .peak{grid-template-columns:1fr;padding:30px 22px;margin-top:48px}
+}
+@media (prefers-reduced-motion:reduce){
+  .build{height:auto}.build .stick{position:static;height:auto;padding:64px 0}
+  .stages li{position:static!important;opacity:1!important}
+  .frame img.fin{opacity:1}
+}
+</style>
+<script src="../copy.js"></script>
+<script src="../../_shared/fb.js" defer></script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="st" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z"/></symbol></svg>
+
+<header class="hero">
+  <div class="wrap top"><img src="../../_assets/logo.png" alt="Forever Builders Home Remodeling"></div>
+  <div class="wrap hero-grid">
+    <div class="left">
+      <div class="eyebrow" data-k="eyebrow">ADU design and build · San Diego County</div>
+      <h1 data-k="h1">Already have ADU&nbsp;plans?<span class="pk">We’ll build to them.</span></h1>
+      <p class="sub" data-k="sub">Send us what you have. We come back with a free estimate and a build timeline, worked out from your plans, not a template.</p>
+      <div class="proofrow">
+        <span><span class="stars"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></span> <b>4.9</b> on Google · 95 reviews</span>
+        <span class="sep"></span><span><b>BBB</b> Accredited</span>
+        <span class="sep"></span><span>CSLB <b>#1037142</b></span>
+      </div>
+    </div>
+    <div class="right">
+      <figure class="photo" style="margin:0"><img data-k-src="hero" src="../../_assets/site/my-forever-builders-room-addition-adu-project.webp" alt="Forever Builders crew on a framing job"><figcaption>On a Forever Builders job site</figcaption></figure>
+      <form class="card" id="estimate" data-fbform novalidate>
+        <h2>Your free estimate</h2>
+        <p class="lede">Under a minute. The office calls you to set a time.</p>
+        <fieldset class="fb-step" data-step="plans">
+          <legend class="fb-q">Where are your ADU plans today?</legend>
+          <div class="opts">
+            <button class="opt" data-opt="approved">Approved, ready to build</button>
+            <button class="opt" data-opt="submitted">Submitted, waiting</button>
+            <button class="opt" data-opt="drawing">Being drawn now</button>
+            <button class="opt" data-opt="none">No plans yet</button>
+          </div>
+        </fieldset>
+        <div class="fb-step" data-step="contact">
+          <div class="row2">
+            <label class="fb-field"><span>Full name</span><input name="name" autocomplete="name" required></label>
+            <label class="fb-field"><span>Phone</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+            <label class="fb-field"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+            <label class="fb-field"><span>Property ZIP</span><input name="zip" inputmode="numeric" maxlength="5" autocomplete="postal-code" required></label>
+          </div>
+          <label class="fb-file"><span data-fname>Plans on hand? Attach them (optional)</span><input type="file" name="plans" accept=".pdf,image/*"></label>
+        </div>
+        <button class="btn btn-wide" type="submit"><span data-k="cta">Get my free estimate</span> <span class="arr">→</span></button>
+        <p class="fb-fine">Free, no obligation. Prefer to talk? <a href="tel:+18332435624">(833) 243-5624</a></p>
+      </form>
+    </div>
+  </div>
+</header>
+
+<section class="build" id="build" aria-label="From plans to a finished ADU">
+  <div class="wrap stick">
+    <ol class="stages">
+      <li class="on"><div class="n">01 · YOUR PLANS</div><h3>We start from what you have.</h3><p>Approved, half drawn or still an idea. We read your plans and work out what it takes to build them on your lot.</p></li>
+      <li><div class="n">02 · OUR CREW</div><h3>Permits, framing, the build.</h3><p>Our team handles permits and approvals, then builds with our own crew and project manager.</p></li>
+      <li><div class="n">03 · THE KEYS</div><h3>Inspected and finished.</h3><p>We inspect every detail before we hand over the finished space.</p></li>
+    </ol>
+    <figure class="frame" style="margin:0">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g class="grid" id="bpgrid"></g>
+        <g id="bp">
+          <path class="bp" d="M60 80H340V420H60Z"/>
+          <path class="bp" d="M60 250H200M200 80V330M200 330H340M270 330V420"/>
+          <path class="bp thin" d="M200 290a40 40 0 0 1 40-40M60 330h40M100 330a40 40 0 0 0-40-40M300 420a30 30 0 0 0-30-30"/>
+          <path class="bp" d="M110 80h50M260 80h50M340 150v50M60 140v50" stroke-width="5"/>
+          <path class="bp thin" d="M60 50H340M60 44v12M340 44v12M372 80V420M366 80h12M366 420h12"/>
+          <text x="96" y="170">LIVING</text><text x="236" y="210">KITCHEN</text><text x="104" y="300">BED</text><text x="214" y="380">BATH</text><text x="292" y="380">ENTRY</text>
+        </g>
+      </svg>
+      <img class="frm" src="../../_assets/site/my-forever-builders-room-addition-adu-project3.webp" alt="Framing inside a Forever Builders build" loading="lazy">
+      <img class="fin" src="../../_assets/site/my-forever-builders-room-addition-adu-project4.webp" alt="A finished interior by Forever Builders" loading="lazy">
+      <figcaption>Photos: Forever Builders job sites</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="jobs">
+  <div class="wrap">
+    <div class="intro">
+      <div><div class="eyebrow">From our own contracts</div><h2 style="margin-top:12px">ADUs and additions we’ve built.</h2></div>
+      <p>Street and year only. House numbers and names stay with us, the way yours will.</p>
+    </div>
+    <ul class="joblist">
+      <li><span class="t">ADU</span><span class="s">Fowles Street <small>Oceanside</small></span><span class="y">2024</span></li>
+      <li><span class="t">Addition</span><span class="s">49th Street <small>San Diego</small></span><span class="y">2024</span></li>
+      <li><span class="t">Room addition</span><span class="s">Chaz Place <small>La Mesa</small></span><span class="y">2024</span></li>
+      <li><span class="t">Addition</span><span class="s">Mount Gaywas Drive <small>San Diego</small></span><span class="y">2023</span></li>
+      <li><span class="t">Addition</span><span class="s">Terra Nova Drive <small>Chula Vista</small></span><span class="y">2023</span></li>
+      <li><span class="t">Room addition</span><span class="s">Bluewater Road <small>Carlsbad</small></span><span class="y">2023</span></li>
+      <li><span class="t">Room addition</span><span class="s">Epinette Avenue <small>San Diego</small></span><span class="y">2022</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="rev">
+  <div class="wrap">
+    <div class="rev-top">
+      <div class="big">4.9</div>
+      <div>
+        <span class="stars"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></span>
+        <h2 style="margin-top:8px">On Google, from 95 reviews.</h2>
+        <div class="badges"><span class="badge">BBB Accredited Business</span><span class="badge">CSLB License #1037142</span><span class="badge">Family owned, San Diego</span></div>
+      </div>
+    </div>
+    <div class="quotes">
+      <figure class="q" style="margin:0"><p>“Forever Builders truly exceeded expectations with the addition to my house, from start to finish. The quality of the work is outstanding.”</p><cite>Adam S.<span>San Diego</span></cite></figure>
+      <figure class="q" style="margin:0"><p>“We got quotes from three companies before making our final decision. We decided to go with Forever Builders due to the ease of communication with Ben.”</p><cite>Autumn P.<span>San Diego</span></cite></figure>
+      <figure class="q" style="margin:0"><p>“Adam my project manager was very helpful and professional. Job site was clean and completed promptly as promised!”</p><cite>Juan C.<span>National City</span></cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="own">
+  <div class="wrap">
+    <div class="g">
+      <img src="../../_assets/site/dor-and-segev-my-forever-builders-owners.jpg" alt="Dor and Ben Benesh, owners of Forever Builders" loading="lazy">
+      <div>
+        <div class="eyebrow">The owners</div>
+        <blockquote style="margin-top:14px">“We’ve built our company on trust, craftsmanship, and doing right by our customers. Our goal is simple: deliver exceptional work and make the remodeling experience as enjoyable as the finished result.”</blockquote>
+        <cite>Dor &amp; Ben Benesh, Forever Builders</cite>
+      </div>
+    </div>
+    <div class="peak">
+      <div><h2>Your plans, priced and scheduled.<span class="pk">Free.</span></h2><p>One short form. We review what you have and come back with an estimate and a build timeline.</p></div>
+      <a class="btn" href="#estimate" data-goto="#estimate" data-from="peak">Start my estimate <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="../../_assets/logo.png" alt="Forever Builders">
+    <div class="legal"><span>Forever Builders Inc · CSLB #1037142</span><span>7812 Miramar Rd, San Diego, CA 92126</span><a href="tel:+18332435624">(833) 243-5624</a></div>
+  </div>
+</footer>
+
+<script>
+/* blueprint grid + scroll-driven stages */
+(function(){
+  var g=document.getElementById('bpgrid'),s='';for(var x=0;x<=400;x+=20)s+='<path d="M'+x+' 0V500"/>';for(var y=0;y<=500;y+=20)s+='<path d="M0 '+y+'H400"/>';g.innerHTML=s;
+  var paths=[].slice.call(document.querySelectorAll('#bp path')),L=paths.map(function(p){var l=p.getTotalLength();p.style.strokeDasharray=l;p.style.strokeDashoffset=l;return l});
+  var sec=document.getElementById('build'),li=[].slice.call(sec.querySelectorAll('.stages li')),frm=sec.querySelector('.frm'),fin=sec.querySelector('.fin'),bp=document.getElementById('bp');
+  var labels=[].slice.call(sec.querySelectorAll('#bp text'));
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){paths.forEach(function(p){p.style.strokeDashoffset=0});return}
+  function cl(v){return v<0?0:v>1?1:v}
+  function tick(){
+    var r=sec.getBoundingClientRect(),p=cl(-r.top/(r.height-innerHeight));
+    var d=cl(p/0.3);paths.forEach(function(el,i){el.style.strokeDashoffset=L[i]*(1-d)});labels.forEach(function(t){t.style.opacity=d>.8?1:0});
+    frm.style.opacity=cl((p-0.33)/0.12);fin.style.opacity=cl((p-0.68)/0.12);
+    bp.style.opacity=1-0.75*cl((p-0.33)/0.12);g.style.opacity=1-cl((p-0.33)/0.12);
+    var k=p<0.33?0:p<0.68?1:2;li.forEach(function(e,i){e.classList.toggle('on',i===k)});
+  }
+  addEventListener('scroll',function(){requestAnimationFrame(tick)},{passive:true});addEventListener('resize',tick);tick();
+})();
+</script>
+</body>
+</html>
